@@ -11,8 +11,12 @@ public class QuizManager : MonoBehaviour
     private Button rightAnswer;
     List<Question> questions = new List<Question>();
 
+    ContaminationManager contaminationManager;
+
     private void Awake()
     {
+        contaminationManager = GetComponent<ContaminationManager>();
+
         questionText = GameObject.Find("Question").GetComponent<Text>();
         for(int i = 1; i <= 3; i++)
         {
@@ -37,7 +41,11 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("Resposta certa");
         }
-        else Debug.Log("Resposta errada");
+        else
+        {
+            Debug.Log("Resposta errada");
+            contaminationManager.gotContaminated(1);
+        }
     }
 
     void LoadQuestion()
