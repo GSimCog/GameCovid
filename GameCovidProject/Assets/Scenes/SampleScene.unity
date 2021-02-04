@@ -672,9 +672,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
-    et quasi architecto beatae?
+  m_Text: 
 --- !u!222 &852870730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -905,7 +903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur
+  m_Text: 
 --- !u!222 &1521974359
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1456,7 +1454,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur
+  m_Text: 
 --- !u!222 &2025517993
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1535,7 +1533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur
+  m_Text: 
 --- !u!222 &2100579728
 CanvasRenderer:
   m_ObjectHideFlags: 0

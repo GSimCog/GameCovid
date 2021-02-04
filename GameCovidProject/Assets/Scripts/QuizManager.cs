@@ -50,14 +50,35 @@ public class QuizManager : MonoBehaviour
 
     void LoadQuestion()
     {
-        int rand = RandomQuestion();
-        questionText.text = questions[rand].question;
-        for(int i = 0; i < answerButtons.Length; i++)
+        int randQ = RandomQuestion();
+        questionText.text = questions[randQ].question;
+        List<int> lasRandA = new List<int>();
+
+        for (int i = 0; i < answerButtons.Length; i++)
         {
+            int randA = Random.Range(0, questions[randQ].answers.Count);
+            if(lasRandA != null)
+            {
+                for (int j = 0; j < lasRandA.Count; j++)
+                {
+                    while (randA == lasRandA[j])
+                    {
+                        randA = Random.Range(0, questions[randQ].answers.Count);
+                        j = 0;
+                    }
+                }
+            }
+            
+            lasRandA.Add(randA);
+
             Text newAnswer = answerButtons[i].GetComponentInChildren<Text>() as Text;
-            newAnswer.text = questions[rand].answers[i];
+            newAnswer.text = questions[randQ].answers[randA];
+
+            if(answerButtons[i].GetComponentInChildren<Text>().text == questions[randQ].rightAnswer)
+            {
+                rightAnswer = answerButtons[i];
+            }
         }
-        rightAnswer = answerButtons[questions[rand].rightAnswer - 1];
     }
 
     int RandomQuestion()
@@ -67,7 +88,7 @@ public class QuizManager : MonoBehaviour
 
     private void ReadCSVFile()
     {
-        TextAsset questionData = Resources.Load<TextAsset>("Questions Table");
+        TextAsset questionData = Resources.Load<TextAsset>("Cenas_Teste");
         
         string[] data = questionData.text.Split(new char[] { '\n' });
 
@@ -75,11 +96,13 @@ public class QuizManager : MonoBehaviour
         {
             string[] row = data[i].Split(new char[] { ',' });
             Question q = new Question();
-            q.question = row[0];
-            q.answers[0] = row[1];
-            q.answers[1] = row[2];
-            q.answers[2] = row[3];
-            int.TryParse(row[4], out q.rightAnswer);
+            int.TryParse(row[0], out q.scene);
+            q.question = row[1];
+            q.answers.Add(row[2]);
+            q.answers.Add(row[3]);
+            q.answers.Add(row[4]);
+
+            q.rightAnswer = q.answers[0];
 
             questions.Add(q);
         }
@@ -88,7 +111,8 @@ public class QuizManager : MonoBehaviour
 
 public class Question
 {
+    public int scene;
     public string question;
-    public string[] answers = new string[3];
-    public int rightAnswer;
+    public List<string> answers = new List<string>();
+    public string rightAnswer;
 }
