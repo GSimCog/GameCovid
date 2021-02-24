@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Contextualization : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Contextualization : MonoBehaviour
     {
         if(GameObject.Find("ContextualizationText").GetComponent<TypeWriter>().currentText == AllTexts.contextualization)
         {
+            if(Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene("Teste");
+            }
             //gameObject.SetActive(false);
             //GameObject.Find("SceneController").GetComponent<Scenes>().ChangeScene(1);
         }

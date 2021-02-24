@@ -16,18 +16,12 @@ public class QuizManager : MonoBehaviour
     private void Awake()
     {
         contaminationManager = GetComponent<ContaminationManager>();
-
-        questionText = GameObject.Find("Question").GetComponent<Text>();
-        for(int i = 1; i <= 3; i++)
-        {
-            answerButtons[i - 1] = GameObject.Find("Answer_" + i).GetComponent<Button>();
-        }
     }
 
     void Start()
     {
         ReadCSVFile();
-        LoadQuestion();
+        //LoadQuestion();
     }
 
     public void NewQuiz()
@@ -50,6 +44,8 @@ public class QuizManager : MonoBehaviour
 
     void LoadQuestion()
     {
+        GetGameObjects();
+
         int randQ = RandomQuestion();
         questionText.text = questions[randQ].question;
         List<int> lasRandA = new List<int>();
@@ -105,6 +101,15 @@ public class QuizManager : MonoBehaviour
             q.rightAnswer = q.answers[0];
 
             questions.Add(q);
+        }
+    }
+
+    private void GetGameObjects()
+    {
+        questionText = GameObject.Find("Question").GetComponent<Text>();
+        for (int i = 1; i <= 3; i++)
+        {
+            answerButtons[i - 1] = GameObject.Find("Answer_" + i).GetComponent<Button>();
         }
     }
 }

@@ -10,7 +10,6 @@ public class TypeWriter : MonoBehaviour
 
     void Start()
     {
-        fullText = AllTexts.contextualization;
         StartCoroutine(ShowText());
     }
 
