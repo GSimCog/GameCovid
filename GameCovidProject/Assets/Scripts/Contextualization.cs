@@ -6,16 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class Contextualization : MonoBehaviour
 {
+    private void Start()
+    {
+        GetComponent<DialogueManager>().StartDialogue();
+    }
+
     void Update()
     {
-        if(GameObject.Find("ContextualizationText").GetComponent<TypeWriter>().currentText == AllTexts.contextualization)
+        if (Input.GetMouseButtonDown(0))
         {
-            if(Input.GetMouseButtonDown(0))
+            GetComponent<DialogueManager>().DisplayNextSentence();
+            if(GetComponent<DialogueManager>().endDialogue)
             {
+                PlayerPrefs.SetInt("ActualScene", 1);
                 SceneManager.LoadScene("Teste");
             }
-            //gameObject.SetActive(false);
-            //GameObject.Find("SceneController").GetComponent<Scenes>().ChangeScene(1);
         }
     }
 }

@@ -15,7 +15,7 @@ public class QuizManager : MonoBehaviour
 
     private void Awake()
     {
-        contaminationManager = GetComponent<ContaminationManager>();
+        contaminationManager = FindObjectOfType<ContaminationManager>();
     }
 
     void Start()
@@ -40,6 +40,7 @@ public class QuizManager : MonoBehaviour
             Debug.Log("Resposta errada");
             contaminationManager.gotContaminated(1);
         }
+        FindObjectOfType<Scenes>().ChangeScene(PlayerPrefs.GetInt("ActualScene") + 1);
     }
 
     void LoadQuestion()

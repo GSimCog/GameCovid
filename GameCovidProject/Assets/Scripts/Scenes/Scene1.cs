@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Scene1 : Scenes
+public class Scene1 : MonoBehaviour
 {
     [SerializeField] private GameObject explanationPanel;
-    [SerializeField] private TypeWriter dialogeText;
     [SerializeField] private GameObject quizPanel;
 
-    DialogueTrigger dialogueTrigger;
     public bool newQuiz = false;
 
     private void Awake()
@@ -19,8 +17,7 @@ public class Scene1 : Scenes
 
     void Start()
     {
-        dialogueTrigger = GetComponent<DialogueTrigger>();
-        dialogueTrigger.TriggerDialogue();
+        GetComponent<DialogueManager>().StartDialogue();
 
         quizPanel.SetActive(false);
         explanationPanel.SetActive(true);
@@ -30,8 +27,8 @@ public class Scene1 : Scenes
     {
         if(Input.GetMouseButtonDown(0) && explanationPanel.activeSelf)
         {
-            FindObjectOfType<DialogueManager>().DisplayNextSentence();
-            if(FindObjectOfType<DialogueManager>().endDialogue)
+            GetComponent<DialogueManager>().DisplayNextSentence();
+            if(GetComponent<DialogueManager>().endDialogue)
             {
                 quizPanel.SetActive(true);
                 explanationPanel.SetActive(false);
@@ -40,10 +37,23 @@ public class Scene1 : Scenes
             }
         }
 
-        if(quizPanel.activeSelf && newQuiz)
+        if (quizPanel.activeSelf)
         {
-            FindObjectOfType<QuizManager>().NewQuiz();
-            newQuiz = false;
+            foreach (Transform child in quizPanel.transform)
+            {
+                Debug.Log(child.gameObject.name);
+                if(child.gameObject.name.Equals("AnswerBalloon") && child.gameObject.activeSelf)
+                {
+                    Debug.Log("answer ativado");
+                }
+                else if (child.gameObject.name.Equals("QuestionBalloon") && child.gameObject.activeSelf && newQuiz)
+                {
+                    Debug.Log("ativos");
+                    FindObjectOfType<QuizManager>().NewQuiz();
+                    newQuiz = false;
+
+                }
+            }
         }
     }
 }

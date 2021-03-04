@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public Dialogue dialogue;
+
     private Queue<string> names;
     private Queue<string> sentences;
 
@@ -17,7 +19,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue()
     {
         names.Clear();
         sentences.Clear();
@@ -51,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string name, string sentence)
     {
-        sentenceText.text = name + ": ";
+        sentenceText.text = name;
         foreach(char letter in sentence.ToCharArray())
         {
             sentenceText.text += letter;

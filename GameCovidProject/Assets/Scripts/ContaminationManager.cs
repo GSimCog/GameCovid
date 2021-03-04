@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class ContaminationManager : MonoBehaviour
 {
-    private float contaminationPoints = 0;
+    private int contaminationPoints;
     private Image contaminationBar;
 
     void Start()
     {
+        contaminationPoints = PlayerPrefs.GetInt("ContaminationPoints");
         contaminationBar = GameObject.Find("ContaminationBar").GetComponent<Image>();
         UpdateContaminationBar();
     }
@@ -42,6 +43,7 @@ public class ContaminationManager : MonoBehaviour
 
     private void UpdateContaminationBar()
     {
+        PlayerPrefs.SetInt("ContaminationPoints", contaminationPoints);
         contaminationBar.fillAmount = contaminationPoints / 100;
     }
 }
