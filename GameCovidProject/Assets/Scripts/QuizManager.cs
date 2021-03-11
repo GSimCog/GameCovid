@@ -92,16 +92,19 @@ public class QuizManager : MonoBehaviour
         for(int i = 1; i < data.Length; i++)
         {
             string[] row = data[i].Split(new char[] { ',' });
-            Question q = new Question();
-            int.TryParse(row[0], out q.scene);
-            q.question = row[1];
-            q.answers.Add(row[2]);
-            q.answers.Add(row[3]);
-            q.answers.Add(row[4]);
+            if(int.Parse(row[0]) == PlayerPrefs.GetInt("ActualScene"))
+            {
+                Question q = new Question();
+                int.TryParse(row[0], out q.scene);
+                q.question = row[1];
+                q.answers.Add(row[2]);
+                q.answers.Add(row[3]);
+                q.answers.Add(row[4]);
 
-            q.rightAnswer = q.answers[0];
+                q.rightAnswer = q.answers[0];
 
-            questions.Add(q);
+                questions.Add(q);
+            }
         }
     }
 
