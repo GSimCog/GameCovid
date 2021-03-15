@@ -11,13 +11,14 @@ public class Scenes : QuizManager
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("ActualScene", 1);
+        //PlayerPrefs.SetInt("ActualScene", 1);
         actualScene = PlayerPrefs.GetInt("ActualScene");
         SetScene(actualScene);
     }
 
     public void SetScene(int value)
     {
+        Debug.Log(value);
         switch (value)
         {
             case 1:

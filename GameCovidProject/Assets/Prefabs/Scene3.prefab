@@ -112,7 +112,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 2461819203154796909}
+  - {fileID: 5321482315360590368}
   m_Father: {fileID: 2561639417674061415}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -245,7 +245,7 @@ MonoBehaviour:
     sentences:
     - "Manter o distanciamento social reduz a dispers\xE3o do v\xEDrus. O distanciamento
       ideal \xE9 de 2 metros e o m\xEDnimo \xE9 de 1 metro."
-  sentenceText: {fileID: 2461819204581814356}
+  sentenceText: {fileID: 5321482316651219737}
   endDialogue: 0
 --- !u!1001 &2561639416908136108
 PrefabInstance:
@@ -344,14 +344,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
---- !u!224 &2461819203154796909 stripped
+--- !u!224 &5321482315360590368 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 119036425717178305, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7662160644223132812, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
   m_PrefabInstance: {fileID: 2561639416908136108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2461819204581814356 stripped
+--- !u!114 &5321482316651219737 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 119036426437775096, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7662160645079856565, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
   m_PrefabInstance: {fileID: 2561639416908136108}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
