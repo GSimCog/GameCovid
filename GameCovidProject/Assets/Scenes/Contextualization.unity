@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 994057566}
   - component: {fileID: 994057569}
   - component: {fileID: 994057568}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ContextualizationText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1193493811}
   - component: {fileID: 1193493810}
   - component: {fileID: 1193493809}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 1668423887}
   - component: {fileID: 1668423886}
   - component: {fileID: 1668423889}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ContextualizationPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

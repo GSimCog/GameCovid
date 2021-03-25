@@ -8,6 +8,8 @@ public class Scenes : QuizManager
     [SerializeField] private int actualScene;
     public string gameType;
     public GameObject[] scenesPrefab;
+    [SerializeField] private GameObject endLevelPanel;
+    private int newScene;
 
     private void Awake()
     {
@@ -42,9 +44,16 @@ public class Scenes : QuizManager
         Instantiate(scenesPrefab[value - 1] as GameObject);
     }
 
-    public void ChangeScene(int newValue)
+    public void ChangeScene()
     {
-        PlayerPrefs.SetInt("ActualScene", newValue);
+        PlayerPrefs.SetInt("ActualScene", newScene);
         SceneManager.LoadScene("Teste");
+    }
+
+    public void EndLevel(int newValue)
+    {
+        newScene = newValue;
+        Debug.Log("EndLevel " + newScene);
+        endLevelPanel.SetActive(true);
     }
 }

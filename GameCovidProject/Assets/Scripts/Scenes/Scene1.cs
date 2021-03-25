@@ -41,14 +41,12 @@ public class Scene1 : MonoBehaviour
         {
             foreach (Transform child in quizPanel.transform)
             {
-                Debug.Log(child.gameObject.name);
                 if(child.gameObject.name.Equals("AnswerBalloon") && child.gameObject.activeSelf)
                 {
-                    Debug.Log("answer ativado");
+
                 }
                 else if (child.gameObject.name.Equals("QuestionBalloon") && child.gameObject.activeSelf && newQuiz)
                 {
-                    Debug.Log("ativos");
                     FindObjectOfType<QuizManager>().NewQuiz();
                     newQuiz = false;
 

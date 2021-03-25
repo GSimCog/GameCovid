@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 1312886324016175320}
   - component: {fileID: 338102326197139233}
   - component: {fileID: 7685258791886071475}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,6 +360,10 @@ PrefabInstance:
     - target: {fileID: 7662160644223132813, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
       propertyPath: m_Name
       value: TextBalloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662160645079856565, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}
+      propertyPath: m_Text
+      value: "Jo\xE3o: Me ajude a escolher a posi\xE7\xE3o correta para usar a m\xE1scara."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fad9324547a09e541b44bac6caa6b7ee, type: 3}

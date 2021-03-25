@@ -34,13 +34,15 @@ public class QuizManager : MonoBehaviour
         if(rightAnswer == btn)
         {
             Debug.Log("Resposta certa");
+            btn.image.color = new Color(0, 0.5f, 0, 0.5f);
         }
         else
         {
             Debug.Log("Resposta errada");
             contaminationManager.gotContaminated(1);
+            btn.image.color = new Color(0.5f, 0, 0, 0.5f);
         }
-        FindObjectOfType<Scenes>().ChangeScene(PlayerPrefs.GetInt("ActualScene") + 1);
+        FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
     }
 
     void LoadQuestion()

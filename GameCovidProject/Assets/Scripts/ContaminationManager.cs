@@ -45,5 +45,6 @@ public class ContaminationManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("ContaminationPoints", contaminationPoints);
         contaminationBar.fillAmount = contaminationPoints / 100;
+        Debug.Log("Contaminação: " + contaminationPoints);
     }
 }

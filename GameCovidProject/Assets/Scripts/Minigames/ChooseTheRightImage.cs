@@ -7,6 +7,7 @@ public class ChooseTheRightImage : MonoBehaviour
 {
     [SerializeField] private Image[] images;
     [SerializeField] private List<Sprite> sprites;
+    private int actualLevel;
 
     void Start()
     {
@@ -25,13 +26,15 @@ public class ChooseTheRightImage : MonoBehaviour
         if(sp.sprite.name == "RightImage")
         {
             Debug.Log("Resposta certa.");
-            FindObjectOfType<Scenes>().ChangeScene(PlayerPrefs.GetInt("ActualScene" + 1));
+            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+            sp.color = new Color(0, 0.5f, 0, 0.5f);
         }
         else
         {
-            Debug.Log("Resposta errada." + PlayerPrefs.GetInt("ActualScene"));
+            Debug.Log("Resposta errada.");
             FindObjectOfType<ContaminationManager>().gotContaminated(1);
-            FindObjectOfType<Scenes>().ChangeScene(PlayerPrefs.GetInt("ActualScene") + 1);
+            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+            sp.color = new Color(0.5f, 0, 0, 0.5f);
         }
     }
 }
