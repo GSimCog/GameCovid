@@ -20,7 +20,6 @@ public class Scenes : QuizManager
 
     public void SetScene(int value)
     {
-        Debug.Log(value);
         switch (value)
         {
             case 1:
@@ -53,7 +52,6 @@ public class Scenes : QuizManager
     public void EndLevel(int newValue)
     {
         newScene = newValue;
-        Debug.Log("EndLevel " + newScene);
         endLevelPanel.SetActive(true);
     }
 }

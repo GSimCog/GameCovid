@@ -11,7 +11,6 @@ public class Scene3 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("ActualScene"));
         if(Input.GetMouseButtonDown(0))
         {
             GetComponent<DialogueManager>().DisplayNextSentence();

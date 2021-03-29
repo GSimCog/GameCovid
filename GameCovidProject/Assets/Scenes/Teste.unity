@@ -699,9 +699,9 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 3
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
-  m_FillMethod: 0
+  m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -829,6 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc6ba0d9dcd9f04ead231e591c4bc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contaminationPoints: 0
+  contaminationBar: {fileID: 1419183663}
 --- !u!1 &1990776430
 GameObject:
   m_ObjectHideFlags: 0
