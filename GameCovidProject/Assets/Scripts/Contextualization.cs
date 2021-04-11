@@ -19,6 +19,7 @@ public class Contextualization : MonoBehaviour
             if(GetComponent<DialogueManager>().endDialogue)
             {
                 PlayerPrefs.SetInt("ActualScene", 1);
+                PlayerPrefs.SetFloat("ContaminationPoints", 0);
                 SceneManager.LoadScene("Teste");
             }
         }

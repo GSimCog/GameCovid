@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ContaminationManager : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class ContaminationManager : MonoBehaviour
         UpdateContaminationBar();
         if (contaminationPoints >= 100)
         {
-            Debug.Log("Foi contaminado!");
+            SceneManager.LoadScene("Defeat");
         }
     }
 

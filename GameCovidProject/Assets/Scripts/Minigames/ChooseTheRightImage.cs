@@ -11,7 +11,7 @@ public class ChooseTheRightImage : MonoBehaviour
 
     void Start()
     {
-        sprites.Add(Resources.Load<Sprite>("Minigames/ChooseRight"));
+        sprites.Add(Resources.Load<Sprite>("Minigames/ChooseRightImage"));
 
         for (int i = 0; i < images.Length; i++)
         {
