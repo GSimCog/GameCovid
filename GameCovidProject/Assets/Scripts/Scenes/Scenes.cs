@@ -13,7 +13,7 @@ public class Scenes : QuizManager
 
     private void Awake()
     {
-        //PlayerPrefs.SetInt("ActualScene", 1);
+        //PlayerPrefs.SetInt("ActualScene", 4);
         actualScene = PlayerPrefs.GetInt("ActualScene");
         SetScene(actualScene);
     }
@@ -36,6 +36,10 @@ public class Scenes : QuizManager
                 break;
             case 4:
                 Debug.Log("Cena 4");
+                gameType = "minigame";
+                break;
+            case 5:
+                Debug.Log("Cena 5");
                 gameType = "minigame";
                 break;
         }

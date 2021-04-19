@@ -25,13 +25,11 @@ public class ChooseTheRightImage : MonoBehaviour
     {
         if(sp.sprite.name == "RightImage")
         {
-            Debug.Log("Resposta certa.");
             FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
             sp.color = new Color(0, 0.5f, 0, 0.5f);
         }
         else
         {
-            Debug.Log("Resposta errada.");
             FindObjectOfType<ContaminationManager>().gotContaminated(1);
             FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
             sp.color = new Color(0.5f, 0, 0, 0.5f);
