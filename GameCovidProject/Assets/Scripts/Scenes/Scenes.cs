@@ -42,6 +42,30 @@ public class Scenes : QuizManager
                 Debug.Log("Cena 5");
                 gameType = "minigame";
                 break;
+            case 6:
+                Debug.Log("Cena 6");
+                gameType = "minigame";
+                break;
+            case 7:
+                Debug.Log("Cena 7");
+                gameType = "minigame";
+                break;
+            case 8:
+                Debug.Log("Cena 8");
+                gameType = "minigame";
+                break;
+            case 9:
+                Debug.Log("Cena 9");
+                gameType = "message";
+                break;
+            case 10:
+                Debug.Log("Cena 6");
+                gameType = "minigame";
+                break;
+            case 11:
+                Debug.Log("Cena 11");
+                gameType = "message";
+                break;
         }
 
         Instantiate(scenesPrefab[value - 1] as GameObject);

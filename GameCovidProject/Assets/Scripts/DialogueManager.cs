@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("A conversa terminou.");
+        //Debug.Log("A conversa terminou.");
         endDialogue = true;
     }
 }
