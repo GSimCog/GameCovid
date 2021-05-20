@@ -59,7 +59,7 @@ public class Scenes : QuizManager
                 gameType = "message";
                 break;
             case 10:
-                Debug.Log("Cena 6");
+                Debug.Log("Cena 10");
                 gameType = "minigame";
                 break;
             case 11:
