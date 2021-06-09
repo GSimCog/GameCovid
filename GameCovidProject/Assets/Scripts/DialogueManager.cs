@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     public Dialogue dialogue;
 
     private Queue<string> names;
-    private Queue<string> sentences;
+    public Queue<string> sentences;
 
     [SerializeField] private Text sentenceText;
     public bool endDialogue;
