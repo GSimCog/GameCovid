@@ -62,6 +62,12 @@ public class Scene7 : MonoBehaviour
             if(hits2D.collider.tag == "RightTable")
             {
                 Debug.Log("Hits 2D Collider: " + hits2D.collider.tag);
+                FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+            }
+            else if(hits2D.collider.tag == "WrongTable")
+            {
+                FindObjectOfType<ContaminationManager>().gotContaminated(1);
+                FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
             }
         }
     }

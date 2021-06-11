@@ -15,16 +15,11 @@ public class Scenes : QuizManager
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("ActualScene", 7);
+        PlayerPrefs.SetInt("ActualScene", 6);
         actualScene = PlayerPrefs.GetInt("ActualScene");
         SetScene(actualScene);
 
         controls = new CursorControls();
-    }
-
-    private void Start()
-    {
-        
     }
 
     public void SetScene(int value)
