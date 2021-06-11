@@ -10,10 +10,7 @@ public class Scene1 : MonoBehaviour
 
     public bool newQuiz = false;
 
-    private void Awake()
-    {
-        
-    }
+    private CursorControls controls;
 
     void Start()
     {
@@ -21,14 +18,17 @@ public class Scene1 : MonoBehaviour
 
         quizPanel.SetActive(false);
         explanationPanel.SetActive(true);
+
+        controls = GameObject.Find("SceneController").GetComponent<Scenes>().controls;
+        controls.Mouse.Click.performed += _ => PerformedClick();
     }
 
-    void Update()
+    private void PerformedClick()
     {
-        if(Input.GetMouseButtonDown(0) && explanationPanel.activeSelf)
+        if(explanationPanel.activeSelf)
         {
             GetComponent<DialogueManager>().DisplayNextSentence();
-            if(GetComponent<DialogueManager>().endDialogue)
+            if (GetComponent<DialogueManager>().endDialogue)
             {
                 quizPanel.SetActive(true);
                 explanationPanel.SetActive(false);
@@ -36,7 +36,10 @@ public class Scene1 : MonoBehaviour
                 newQuiz = true;
             }
         }
+    }
 
+    void Update()
+    {
         if (quizPanel.activeSelf)
         {
             foreach (Transform child in quizPanel.transform)
@@ -49,7 +52,6 @@ public class Scene1 : MonoBehaviour
                 {
                     FindObjectOfType<QuizManager>().NewQuiz();
                     newQuiz = false;
-
                 }
             }
         }

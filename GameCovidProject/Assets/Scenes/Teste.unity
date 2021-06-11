@@ -161,7 +161,7 @@ MonoBehaviour:
   - {fileID: 2987804340389813086, guid: be95014cd7a029646a4d45d44130df51, type: 3}
   - {fileID: 2962045103842253210, guid: be941115612727d4f9db4cb9681bde8d, type: 3}
   - {fileID: 6516905555923866850, guid: bafddac88dbd80d41937ae9d2410ad77, type: 3}
-  - {fileID: 6197661363105789286, guid: 7014e077f0b454640874fffb4db37d72, type: 3}
+  - {fileID: 4819183117250848718, guid: 7014e077f0b454640874fffb4db37d72, type: 3}
   - {fileID: 2206523937958701308, guid: fed0425a20b66a949ba790dc45fadab8, type: 3}
   - {fileID: 152633413154490162, guid: ca58ebec965579849a6582d48473461a, type: 3}
   - {fileID: 2098681838199467783, guid: 13c5141b53b18e7408bb68f3b7d3c69c, type: 3}
@@ -754,16 +754,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1581708174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1581708176
 MonoBehaviour:
   m_ObjectHideFlags: 0
