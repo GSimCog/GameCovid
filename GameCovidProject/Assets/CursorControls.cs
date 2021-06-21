@@ -20,7 +20,7 @@ public class @CursorControls : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Click"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""1a43dc9c-93d0-4c58-a960-708510f2a941"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -39,7 +39,7 @@ public class @CursorControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""00625486-f9fe-4fc7-8a0d-f16633b62ff8"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Touchscreen>/touch0/tap"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -50,7 +50,7 @@ public class @CursorControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""69bb6f60-d743-4bf5-b366-e25432968741"",
-                    ""path"": ""<Mouse>/position"",
+                    ""path"": ""<Touchscreen>/touch0/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

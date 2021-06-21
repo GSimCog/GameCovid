@@ -20,7 +20,7 @@ public class Scene1 : MonoBehaviour
         explanationPanel.SetActive(true);
 
         controls = GameObject.Find("SceneController").GetComponent<Scenes>().controls;
-        controls.Mouse.Click.performed += _ => PerformedClick();
+        controls.Mouse.Click.started += _ => PerformedClick();
     }
 
     private void PerformedClick()

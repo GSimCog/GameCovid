@@ -14,7 +14,7 @@ public class Scene10 : MonoBehaviour
         GetComponent<DialogueManager>().StartDialogue();
 
         controls = GameObject.Find("SceneController").GetComponent<Scenes>().controls;
-        controls.Mouse.Click.performed += _ => PerformedClick();
+        controls.Mouse.Click.started += _ => PerformedClick();
     }
 
     private void PerformedClick()

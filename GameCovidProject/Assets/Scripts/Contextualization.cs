@@ -6,22 +6,37 @@ using UnityEngine.SceneManagement;
 
 public class Contextualization : MonoBehaviour
 {
+    private CursorControls controls;
+
+    private void Awake()
+    {
+        controls = new CursorControls();
+    }
+
     private void Start()
     {
         GetComponent<DialogueManager>().StartDialogue();
+        controls.Mouse.Click.started += _ => PerformedClick();
     }
 
-    void Update()
+    private void PerformedClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        GetComponent<DialogueManager>().DisplayNextSentence();
+        if (GetComponent<DialogueManager>().endDialogue)
         {
-            GetComponent<DialogueManager>().DisplayNextSentence();
-            if(GetComponent<DialogueManager>().endDialogue)
-            {
-                PlayerPrefs.SetInt("ActualScene", 1);
-                PlayerPrefs.SetFloat("ContaminationPoints", 0);
-                SceneManager.LoadScene("Teste");
-            }
+            PlayerPrefs.SetInt("ActualScene", 1);
+            PlayerPrefs.SetFloat("ContaminationPoints", 0);
+            SceneManager.LoadScene(2);
         }
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 }

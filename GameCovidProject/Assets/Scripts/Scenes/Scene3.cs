@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Scene3 : MonoBehaviour
 {
+    private CursorControls controls;
+
     void Start()
     {
         GetComponent<DialogueManager>().StartDialogue();
+
+        controls = GameObject.Find("SceneController").GetComponent<Scenes>().controls;
+        controls.Mouse.Click.started += _ => PerformedClick();
     }
 
-    void Update()
+    private void PerformedClick()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            GetComponent<DialogueManager>().DisplayNextSentence();
-            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
-        }
+        GetComponent<DialogueManager>().DisplayNextSentence();
+        FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
     }
 }

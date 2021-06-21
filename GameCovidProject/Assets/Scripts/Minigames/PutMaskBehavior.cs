@@ -18,7 +18,7 @@ public class PutMaskBehavior : MonoBehaviour
 
     void Start()
     {
-        controls.Mouse.Click.performed += _ => PerformedClick();
+        controls.Mouse.Click.started += _ => PerformedClick();
     }
 
     private void PerformedClick()

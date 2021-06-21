@@ -15,7 +15,7 @@ public class Scenes : QuizManager
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("ActualScene", 6);
+        //PlayerPrefs.SetInt("ActualScene", 11);
         actualScene = PlayerPrefs.GetInt("ActualScene");
         SetScene(actualScene);
 
@@ -67,7 +67,11 @@ public class Scenes : QuizManager
     public void ChangeScene()
     {
         PlayerPrefs.SetInt("ActualScene", newScene);
-        SceneManager.LoadScene("Teste");
+        if(newScene > scenesPrefab.Length)
+        {
+            SceneManager.LoadScene(3);
+        }
+        else SceneManager.LoadScene(2);
     }
 
     public void EndLevel(int newValue)

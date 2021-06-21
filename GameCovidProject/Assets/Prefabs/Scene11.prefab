@@ -109,6 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5717161327891759041}
   - component: {fileID: 5717161327891759054}
+  - component: {fileID: 6477228265923733452}
   m_Layer: 0
   m_Name: Scene11
   m_TagString: Untagged
@@ -155,6 +156,18 @@ MonoBehaviour:
     - "A doen\xE7a \xE9 perigosa, continue se cuidando."
   sentenceText: {fileID: 2666721886770182908}
   endDialogue: 0
+--- !u!114 &6477228265923733452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717161327891759040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1445e2e18a4e0d743b9b7a6cedb7f361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5717161326711951177
 PrefabInstance:
   m_ObjectHideFlags: 0
