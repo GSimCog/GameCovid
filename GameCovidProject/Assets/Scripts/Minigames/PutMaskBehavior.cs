@@ -9,6 +9,9 @@ public class PutMaskBehavior : MonoBehaviour
     public GameObject person;
     [SerializeField] private Sprite[] personSp;
     public Scene6 scene;
+    private float timer;
+    private bool addedContamination = false;
+    [SerializeField] Animator anim;
 
     private void Awake()
     {
@@ -19,6 +22,20 @@ public class PutMaskBehavior : MonoBehaviour
     void Start()
     {
         controls.Mouse.Click.started += _ => PerformedClick();
+    }
+
+    private void Update()
+    {
+        if(!addedContamination)
+        {
+            timer += Time.deltaTime;
+            if(timer >= 3)
+            {
+                GameObject.FindObjectOfType<ContaminationManager>().gotContaminated(1);
+                anim.SetBool("isBlinking", true);
+                addedContamination = true;
+            }
+        }
     }
 
     private void PerformedClick()

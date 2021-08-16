@@ -9,7 +9,7 @@ public class Scenes : QuizManager
     public string gameType;
     public GameObject[] scenesPrefab;
     [SerializeField] private GameObject endLevelPanel;
-    private int newScene;
+    private int newSceneValue;
 
     public CursorControls controls;
 
@@ -66,17 +66,21 @@ public class Scenes : QuizManager
 
     public void ChangeScene()
     {
-        PlayerPrefs.SetInt("ActualScene", newScene);
-        if(newScene > scenesPrefab.Length)
+        PlayerPrefs.SetInt("ActualScene", newSceneValue);
+        if (newSceneValue > scenesPrefab.Length)
         {
             SceneManager.LoadScene(3);
+            PlayerPrefs.SetInt("ActualScene", 0);
         }
-        else SceneManager.LoadScene(2);
+        else
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     public void EndLevel(int newValue)
     {
-        newScene = newValue;
+        newSceneValue = newValue;
         endLevelPanel.SetActive(true);
     }
 

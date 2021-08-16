@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ChooseTheRightOrder : MonoBehaviour
 {
-    [SerializeField] private GameObject buttonToNextLevel;
+    [SerializeField] private Button buttonToNextLevel;
     [SerializeField] private List<Sprite> sprites;
     [SerializeField] private List<Button> buttons;
 
@@ -13,7 +13,7 @@ public class ChooseTheRightOrder : MonoBehaviour
 
     void Start()
     {
-        buttonToNextLevel.SetActive(false);
+        buttonToNextLevel.interactable = false;
 
         for (int i = 0; i < buttons.Count; i++)
         {
@@ -39,9 +39,9 @@ public class ChooseTheRightOrder : MonoBehaviour
 
         if(actualNumber == buttons.Count)
         {
-            buttonToNextLevel.SetActive(true);
+            buttonToNextLevel.interactable = true;
         }
-        else buttonToNextLevel.SetActive(false);
+        else buttonToNextLevel.interactable = false;
     }
 
     public void checkAnwser()

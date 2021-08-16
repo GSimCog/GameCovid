@@ -41,6 +41,7 @@ public class ContaminationManager : MonoBehaviour
         if (contaminationPoints >= 100)
         {
             SceneManager.LoadScene("Defeat");
+            PlayerPrefs.SetInt("ActualScene", 0);
         }
     }
 

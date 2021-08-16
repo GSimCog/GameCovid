@@ -17,7 +17,7 @@ public class Scene6 : MonoBehaviour
     {
         timePassed += Time.deltaTime;
 
-        if(timePassed >= 3)
+        if(timePassed >= 2)
         {
             if(!isWithoutMask)
             {
