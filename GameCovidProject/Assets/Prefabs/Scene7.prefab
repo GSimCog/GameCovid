@@ -810,6 +810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene7Models
       objectReference: {fileID: 0}
+    - target: {fileID: 4747149373973082493, guid: ee3c781d0be5c0e4387e3d88c835122a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5090748996922789400, guid: ee3c781d0be5c0e4387e3d88c835122a, type: 3}
       propertyPath: m_Mesh
       value: 
