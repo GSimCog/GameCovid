@@ -160,6 +160,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976052603627448401}
     m_Modifications:
+    - target: {fileID: 4789666270513840111, guid: ec12b8fddde51f643b5992a0840c4c7f, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 79e9a49f0e9d12c4cb22afcf02c2a4de, type: 3}
+    - target: {fileID: 4789666270513840111, guid: ec12b8fddde51f643b5992a0840c4c7f, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 96fb8ccf722644e48b62f221d9075c2b, type: 3}
+    - target: {fileID: 4789666270513840111, guid: ec12b8fddde51f643b5992a0840c4c7f, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1434330bd8a5fcc488c537c2d04fbd14, type: 3}
     - target: {fileID: 6782290151450599469, guid: ec12b8fddde51f643b5992a0840c4c7f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

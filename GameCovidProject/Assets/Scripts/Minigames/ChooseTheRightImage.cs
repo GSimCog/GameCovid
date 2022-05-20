@@ -23,15 +23,15 @@ public class ChooseTheRightImage : MonoBehaviour
 
     public void selectImage(Image sp)
     {
-        if(sp.sprite.name == "RightImage")
+        if(sp.sprite.name == "RightImage" || sp.sprite.name == "RightImage2")
         {
-            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1, true);
             sp.color = new Color(0, 0.5f, 0, 0.5f);
         }
         else
         {
             FindObjectOfType<ContaminationManager>().gotContaminated(1);
-            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+            FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1, false);
             sp.color = new Color(0.5f, 0, 0, 0.5f);
         }
     }

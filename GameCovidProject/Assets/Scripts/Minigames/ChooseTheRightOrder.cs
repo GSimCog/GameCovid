@@ -60,6 +60,6 @@ public class ChooseTheRightOrder : MonoBehaviour
         {
             FindObjectOfType<ContaminationManager>().gotContaminated(2);
         }
-        FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+        //FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
     }
 }

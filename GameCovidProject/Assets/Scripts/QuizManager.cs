@@ -31,18 +31,21 @@ public class QuizManager : MonoBehaviour
 
     public void CheckAnswer(Button btn)
     {
+        bool won;
         if(rightAnswer == btn)
         {
-            Debug.Log("Resposta certa");
+            //Debug.Log("Resposta certa");
             btn.image.color = new Color(0, 0.5f, 0, 0.5f);
+            won = true;
         }
         else
         {
-            Debug.Log("Resposta errada");
+            //Debug.Log("Resposta errada");
+            won = false;
             contaminationManager.gotContaminated(1);
             btn.image.color = new Color(0.5f, 0, 0, 0.5f);
         }
-        FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+        FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1, won);
     }
 
     void LoadQuestion()

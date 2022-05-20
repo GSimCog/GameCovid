@@ -9,6 +9,8 @@ public class Scenes : QuizManager
     public string gameType;
     public GameObject[] scenesPrefab;
     [SerializeField] private GameObject endLevelPanel;
+    [SerializeField] private GameObject wonLevelPanel;
+    [SerializeField] private GameObject lostLevelPanel;
     private int newSceneValue;
 
     public CursorControls controls;
@@ -76,6 +78,13 @@ public class Scenes : QuizManager
         {
             SceneManager.LoadScene(2);
         }
+    }
+
+    public void EndLevel(int newValue, bool won)
+    {
+        newSceneValue = newValue;
+        if(won)wonLevelPanel.SetActive(true);
+        else lostLevelPanel.SetActive(true);
     }
 
     public void EndLevel(int newValue)
