@@ -36,8 +36,8 @@ public class Scene6 : MonoBehaviour
         withoutMask = Random.Range(0, 4);
         people[withoutMask].GetComponent<SpriteRenderer>().sprite = personSp[0];
         GameObject gObj = Instantiate(putMask, new Vector3(people[withoutMask].GetComponent<Transform>().position.x, 0.83f, 0), Quaternion.identity);
-        gObj.GetComponent<PutMaskBehavior>().person = people[withoutMask];
-        gObj.GetComponent<PutMaskBehavior>().scene = GetComponent<Scene6>();
+        //gObj.GetComponent<PutMaskBehavior>().person = people[withoutMask];
+        //gObj.GetComponent<PutMaskBehavior>().scene = GetComponent<Scene6>();
         isWithoutMask = true;
         totalPeople += 1;
     }

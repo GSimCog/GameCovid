@@ -8,6 +8,7 @@ public class ContaminationManager : MonoBehaviour
 {
     [SerializeField] private float contaminationPoints;
     [SerializeField] private Image contaminationBar;
+    [SerializeField] private ContaminationBarFeedback feedback;
 
     void Start()
     {
@@ -24,7 +25,10 @@ public class ContaminationManager : MonoBehaviour
 
     public void gotContaminated(int gravity)
     {
-        switch(gravity)
+
+        feedback.GiveFeedback();
+
+        switch (gravity)
         {
             case 0:
                 contaminationPoints += 10;

@@ -28,7 +28,7 @@ public class Scene1 : MonoBehaviour
         if(explanationPanel.activeSelf)
         {
             GetComponent<DialogueManager>().DisplayNextSentence();
-            if (GetComponent<DialogueManager>().endDialogue)
+            if (GetComponent<DialogueManager>().lastSentence)
             {
                 quizPanel.SetActive(true);
                 explanationPanel.SetActive(false);

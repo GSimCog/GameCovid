@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Text sentenceText;
     public bool endDialogue;
 
+    public bool lastSentence;
+
     private void Awake()
     {
         names = new Queue<string>();
@@ -38,9 +40,15 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (lastSentence) 
         {
             EndDialogue();
+            return;
+        }
+        if(sentences.Count == 0)
+        {
+            lastSentence = true;
+            //EndDialogue();
             return;
         }
 

@@ -15,7 +15,7 @@ public class ChooseTheRightImage : MonoBehaviour
 
         for (int i = 0; i < images.Length; i++)
         {
-            int rand = Random.Range(0, sprites.Count - 1);
+            int rand = Random.Range(0, sprites.Count);
             images[i].sprite = sprites[rand];
             sprites.RemoveAt(rand);
         }

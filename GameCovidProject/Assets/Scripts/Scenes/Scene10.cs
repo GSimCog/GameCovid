@@ -20,7 +20,7 @@ public class Scene10 : MonoBehaviour
     private void PerformedClick()
     {
         GetComponent<DialogueManager>().DisplayNextSentence();
-        if (!minigameStarted && GetComponent<DialogueManager>().sentences.Count == 0)
+        if (!minigameStarted && GetComponent<DialogueManager>().lastSentence)
         {
             minigame.SetActive(true);
             minigameStarted = true;

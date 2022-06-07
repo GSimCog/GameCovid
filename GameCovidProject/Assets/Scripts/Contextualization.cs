@@ -22,7 +22,7 @@ public class Contextualization : MonoBehaviour
     private void PerformedClick()
     {
         GetComponent<DialogueManager>().DisplayNextSentence();
-        if (GetComponent<DialogueManager>().endDialogue)
+        if (GetComponent<DialogueManager>().lastSentence)
         {
             PlayerPrefs.SetInt("ActualScene", 1);
             PlayerPrefs.SetFloat("ContaminationPoints", 0);

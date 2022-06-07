@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Scenes : QuizManager
 {
@@ -80,11 +81,21 @@ public class Scenes : QuizManager
         }
     }
 
-    public void EndLevel(int newValue, bool won)
+    public void EndLevel(int newValue, bool won, string altenativeMessage = "")
     {
         newSceneValue = newValue;
         if(won)wonLevelPanel.SetActive(true);
         else lostLevelPanel.SetActive(true);
+        if(altenativeMessage != "") 
+        {
+            if(won) wonLevelPanel.GetComponentInChildren<Text>().text = altenativeMessage;
+            else    lostLevelPanel.GetComponentInChildren<Text>().text = altenativeMessage;
+        }
+        else 
+        {
+            if (won) wonLevelPanel.GetComponentInChildren<Text>().text = "Certa Resposta! Vamos prosseguir";
+            else lostLevelPanel.GetComponentInChildren<Text>().text = "Resposta errada! Probabilidade de contaminação aumentada!";
+        }
     }
 
     public void EndLevel(int newValue)

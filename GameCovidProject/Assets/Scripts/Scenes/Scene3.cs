@@ -17,6 +17,6 @@ public class Scene3 : MonoBehaviour
     private void PerformedClick()
     {
         GetComponent<DialogueManager>().DisplayNextSentence();
-        FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
+        if(GetComponent<DialogueManager>().lastSentence) FindObjectOfType<Scenes>().EndLevel(PlayerPrefs.GetInt("ActualScene") + 1);
     }
 }
