@@ -1,12 +1,22 @@
 # Linha de Frente: Instructional Digital Game for COVID-19 Prevention
 
-[![Conference](https://img.shields.io/badge/SBGames_2026-Trilha_Saúde-blue.svg)](https://sbgames.org/)
 [![Engine](https://img.shields.io/badge/Engine-Unity-black.svg?logo=unity)](https://unity.com/)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://play.google.com/)
 [![INPI Registration](https://img.shields.io/badge/INPI_Registration-BR512023001415--0-orange.svg)](https://www.gov.br/inpi/)
+[![](https://img.shields.io/badge/Available%20on-Play%20Store-green)](https://play.google.com/store/apps/details?id=com.josericardo_jr.LinhaDeFrente)
 [![Institution](https://img.shields.io/badge/Institution-IFRJ-red.svg)](https://portal.ifrj.edu.br/)
 
 > **Linha de Frente** is a serious puzzle mobile game developed by researchers and students at the **Instituto Federal do Rio de Janeiro (IFRJ)**. Designed to bridge the gap between abstract health guidelines and procedural habits, the game models viral propagation dynamics and reinforces critical biosafety protocols through active problem-solving.
+
+---
+
+## Authors
+This research is conducted by a student and a professor from the Instituto Federal do Rio de Janeiro, Brazil.
+- **Stéphanie Gomes (student)**
+- **Izack Costa (student)**
+- **Juliana Silva (research professor and supervisor)**
+- **Ana Carvalho (research professor and supervisor)**
+- **Jose Ricardo da Silva Junior (research professor and supervisor)**
 
 ---
 
@@ -17,7 +27,6 @@
 - [Gameplay & Scenario Breakdown](#-gameplay--scenario-breakdown)
 - [Key Research Findings & Empirical Results](#-key-research-findings--empirical-results)
 - [Technical Architecture](#-technical-architecture)
-- [Repository Structure](#-repository-structure)
 - [Getting Started & Installation](#-getting-started--installation)
 - [Intellectual Property & Registration](#-intellectual-property--registration)
 - [Citation](#-citation)
@@ -84,35 +93,6 @@ The educational impact and usability of *Linha de Frente* were evaluated with **
 * **Target Platforms:** Android (Architecture extensible to iOS & WebGL)
 * **Art & Audio:** 2D Vector & Isometric Assets with clear UI color-coding for high visual literacy
 * **Telemetry & Tracking:** In-engine performance logging and score aggregation
-
----
-
-## 📂 Repository Structure
-
-```text
-├── Assets/
-│   ├── Animations/         # Character and UI transition clips
-│   ├── Audio/              # Sound effects, ambient tracks, and audio cues
-│   ├── Prefabs/            # Reusable UI elements, scenario interactive objects
-│   ├── Scenes/
-│   │   ├── 00_MainMenu.unity
-│   │   ├── 01_QuizDiagnostic.unity
-│   │   ├── 02_MaskAlignment.unity
-│   │   ├── 03_HandHygiene.unity
-│   │   ├── 04_PPEDonning.unity
-│   │   ├── 05_BusCommute.unity
-│   │   ├── 06_PPEDoffing.unity
-│   │   ├── 07_ChemicalCleaning.unity
-│   │   └── 08_SummaryFeedback.unity
-│   ├── Scripts/
-│   │   ├── Core/           # Game manager, scene transitions, persistence
-│   │   ├── Gameplay/       # Contamination meter, quiz engines, drag-and-drop
-│   │   └── UI/             # Dialog systems, gauges, accessible HUD
-│   └── Sprites/            # 2D character sprites, environments, UI icons
-├── ProjectSettings/        # Unity project configurations & build settings
-├── README.md               # Repository documentation
-└── LICENSE                 # License terms
-```
 
 ---
 
